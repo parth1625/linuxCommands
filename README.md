@@ -61,3 +61,27 @@
     sudo nmap -O (OS info)
     sudo nmap -V google.com (Detailed info about remote machine)
     sudo nmap 192.168.1.* (Scan whole subnet)
+
+## Dispaly wireless interfaces:
+    iwconfig
+
+## Display filesystem information:
+    df -hT
+
+## Display open ports:
+    ss 
+    netstat
+    ss -tnlp (TCP ports)
+    netstat -tnlp (TCP ports)
+    ss -unlp (UDP ports)
+    netstat -unlp (UDP ports)
+
+## Find files by name on system:
+    locate <FILEMANE>
+    locate -i <STRING>   (Find files that include <STRING> in their names)
+    locate -i <FILE1> <FILE2>   (Find multiple files)
+    find / -iname <FILEMANE>   
+    find /path/to/file/ -iname <FILEMANE>   (Find in specific directory)
+    find . -iname <FILENAME>   (Find in current directory)
+    find /path/to/file/ -iname -empty   (Find empty files)
+    find . -size +5M\   (Find files larger than 5MB)
