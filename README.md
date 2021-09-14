@@ -13,10 +13,10 @@
     ps -o pid,user,%mem,command ax | sort -b -k3 -r
 
 ## Memory usage per PID:
-    sudo pmap 917
-    sudo pmap 917 | tail -n 1
-    sudo pmap 917 | tail -n 1 | awk '/[0-9]K/{print $2}'
-    sudo pmap 917 531 | grep total
+    sudo pmap <PID>
+    sudo pmap <PID> | tail -n 1
+    sudo pmap <PID> | tail -n 1 | awk '/[0-9]K/{print $2}'
+    sudo pmap <PID> 531 | grep total
 
 ## Find details about domain:
     nslookup google.com
