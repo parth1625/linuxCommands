@@ -56,8 +56,8 @@
     nmcli dev dis <DEVICE>
 
 ## *nmap* command:
-    sudo nmap -sP 192.168.1.0/24
-    sudo nmap -F
-    sudo nmap -O
-    sudo nmap -V google.com
-    sudo nmap 192.168.1.*
+    sudo nmap -sP 192.168.1.0/24 (List of devices connected to router)
+    sudo nmap -F (Fast scan)
+    sudo nmap -O (OS info)
+    sudo nmap -V google.com (Detailed info about remote machine)
+    sudo nmap 192.168.1.* (Scan whole subnet)
