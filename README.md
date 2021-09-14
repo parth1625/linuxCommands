@@ -54,3 +54,10 @@
     nmcli con up <NAME>
     nmcli con reload
     nmcli dev dis <DEVICE>
+
+## *nmap* command:
+    sudo nmap -sP 192.168.1.0/24
+    sudo nmap -F
+    sudo nmap -O
+    sudo nmap -V google.com
+    sudo nmap 192.168.1.*
