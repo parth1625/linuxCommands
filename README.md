@@ -85,3 +85,6 @@
     find . -iname <FILENAME>                 (Find in current directory)
     find /path/to/file/ -iname -empty        (Find empty files)
     find . -size +5M\                        (Find files larger than 5MB)
+
+## Find installed packages:
+    sudo apt list --installed
