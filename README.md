@@ -16,7 +16,7 @@
     sudo pmap <PID>
     sudo pmap <PID> | tail -n 1
     sudo pmap <PID> | tail -n 1 | awk '/[0-9]K/{print $2}'
-    sudo pmap <PID> 531 | grep total
+    sudo pmap <PID1> <PID2> | grep total
 
 ## Find details about domain:
     nslookup google.com
