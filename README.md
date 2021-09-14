@@ -43,10 +43,10 @@
 
 ## Display info anout system:
     uname -a
-    uname -s (Kernel name)
-    uname -r (Kernel version)
-    uname -n (Hostname)
-    uname -m (Hardware name and Processor name)
+    uname -s                                 (Kernel name)
+    uname -r                                 (Kernel version)
+    uname -n                                 (Hostname)
+    uname -m                                 (Hardware name and Processor name)
 
 ## List Wi-Fi networks using *nmcli*:
     nmcli con show
@@ -56,11 +56,11 @@
     nmcli dev dis <DEVICE>
 
 ## *nmap* command:
-    sudo nmap -sP 192.168.1.0/24 (List of devices connected to router)
-    sudo nmap -F (Fast scan)
-    sudo nmap -O (OS info)
-    sudo nmap -V google.com (Detailed info about remote machine)
-    sudo nmap 192.168.1.* (Scan whole subnet)
+    sudo nmap -sP 192.168.1.0/24             (List of devices connected to router)
+    sudo nmap -F                             (Fast scan)
+    sudo nmap -O                             (OS info)
+    sudo nmap -V google.com                  (Detailed info about remote machine)
+    sudo nmap 192.168.1.*                    (Scan whole subnet)
 
 ## Dispaly wireless interfaces:
     iwconfig
@@ -78,10 +78,10 @@
 
 ## Find files by name on system:
     locate <FILEMANE>
-    locate -i <STRING>   (Find files that include <STRING> in their names)
-    locate -i <FILE1> <FILE2>   (Find multiple files)
+    locate -i <STRING>                       (Find files that include <STRING> in their names)
+    locate -i <FILE1> <FILE2>                (Find multiple files)
     find / -iname <FILEMANE>   
-    find /path/to/file/ -iname <FILEMANE>   (Find in specific directory)
-    find . -iname <FILENAME>   (Find in current directory)
-    find /path/to/file/ -iname -empty   (Find empty files)
-    find . -size +5M\   (Find files larger than 5MB)
+    find /path/to/file/ -iname <FILEMANE>    (Find in specific directory)
+    find . -iname <FILENAME>                 (Find in current directory)
+    find /path/to/file/ -iname -empty        (Find empty files)
+    find . -size +5M\                        (Find files larger than 5MB)
