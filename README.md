@@ -116,7 +116,3 @@
     aws s3 cp -r s3://<BUCKET>/ /local/path/                 (Download all objects from bucket to local)
 
     aws s3 cp -r <DIRECTORY> s3://<BUCKET>/ --exclude ".txt" (Upload direcotry to S3 except ".txt" file)
-
-
-    
-
