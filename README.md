@@ -91,15 +91,29 @@
 
 ## Google Cloud Commands:
     gsutil ls                                                 (List all buckets)
-    gsutil ls -L -b gs://<BUCKETNAME>
-    gsutil ls gs://<BUCKETNAME>                               (List all objects in bucket)
+    gsutil ls -L -b gs://<BUCKET>
+    gsutil ls gs://<BUCKET>                               (List all objects in bucket)
 
-    gsutil cp gs://<BUCKETNAME>/<FILENAME>/  /local/path/     (Download file from Cloud Storage)
-    gsutil cp -r gs://<BUCKETNAME>/<DIRECTORY>/ /local/path/  (Download folder from Cloud Storage)
-    gsutil cp <FILENAME>  gs://<BUCKETNAME>/                  (Upload file to Cloud Storage)
-    gsutil cp -r <DIRECTORY> gs://<BUCKETNAME>/               (Upload folder to Cloud Storage)
+    gsutil cp gs://<BUCKET>/<FILENAME>/  /local/path/     (Download file from Cloud Storage)
+    gsutil cp -r gs://<BUCKET>/<DIRECTORY>/ /local/path/  (Download folder from Cloud Storage)
+    gsutil cp <FILENAME>  gs://<BUCKET>/                  (Upload file to Cloud Storage)
+    gsutil cp -r <DIRECTORY> gs://<BUCKET>/               (Upload folder to Cloud Storage)
 
-    gsutil mv gs://<BUCKETNAME>/* </local/path>               (Move all objects from a bucket to local directory)
-    gsutil mv <DIRECTORY> gs://<BUCKETNAME>                   (Move all objects from a local directory to bucket) 
+    gsutil mv gs://<BUCKET>/* </local/path>               (Move all objects from a bucket to local directory)
+    gsutil mv <DIRECTORY> gs://<BUCKET>                   (Move all objects from a local directory to bucket)
+
+## AWS Commands:
+    aws s3 ls                                                 (List all buckets)
+
+    aws s3 cp s3://<BUCKET>/<FILENAME> s3://<BUCKET>/        (Copy file from S3 to S3)
+    aws s3 cp <FILENAME> s3://<BUCKET>/                      (Upload local file to S3)
+    aws s3 cp -r <DIRECTORY> s3://<BUCKET>/                  (Upload local directory to S3)
+    aws s3 cp s3://<BUCKET>/<FILENAME> /local/path/          (Download file from S3 to local)
+    aws s3 cp -r s3://<BUCKET>/<DIRECTORY> /local/path/      (Download directory to local)
+    aws s3 cp -r s3://<BUCKET>/ /local/path/                 (Download all objects from bucket to local)
+
+    aws s3 cp -r <DIRECTORY> s3://<BUCKET>/ --exclude ".txt" (Upload direcotry to S3 except ".txt" file)
+
+
     
 
