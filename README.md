@@ -88,3 +88,18 @@
 
 ## Find installed packages:
     sudo apt list --installed
+
+## Google Cloud Commands:
+    gsutil ls                                                 (List all buckets)
+    gsutil ls -L -b gs://<BUCKETNAME>
+    gsutil ls gs://<BUCKETNAME>                               (List all objects in bucket)
+
+    gsutil cp gs://<BUCKETNAME>/<FILENAME>/  /local/path/     (Download file from Cloud Storage)
+    gsutil cp -r gs://<BUCKETNAME>/<DIRECTORY>/ /local/path/  (Download folder from Cloud Storage)
+    gsutil cp <FILENAME>  gs://<BUCKETNAME>/                  (Upload file to Cloud Storage)
+    gsutil cp -r <DIRECTORY> gs://<BUCKETNAME>/               (Upload folder to Cloud Storage)
+
+    gsutil mv gs://<BUCKETNAME>/* </local/path>               (Move all objects from a bucket to local directory)
+    gsutil mv <DIRECTORY> gs://<BUCKETNAME>                   (Move all objects from a local directory to bucket) 
+    
+
