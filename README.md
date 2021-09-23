@@ -12,6 +12,9 @@
 ## Memory usage per process:
     ps -o pid,user,%mem,command ax | sort -b -k3 -r
 
+## Count number of files/folders in a directory;
+    ls | wc -l
+
 ## Memory usage per PID:
     sudo pmap <PID>
     sudo pmap <PID> | tail -n 1
