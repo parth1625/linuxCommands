@@ -116,3 +116,9 @@
     aws s3 cp -r s3://<BUCKET>/ /local/path/                 (Download all objects from bucket to local)
 
     aws s3 cp -r <DIRECTORY> s3://<BUCKET>/ --exclude ".txt" (Upload direcotry to S3 except ".txt" file)
+
+## Azure Commands:
+    az login                               
+    azcopy login  
+
+    azcopy copy -r https://<ACCOUNT>.blob.core.windows.net/<CONTAINER>/<DIRECTORY> /local/path   (Copy file from Azure Blog to local)
