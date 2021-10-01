@@ -128,6 +128,7 @@
     sudo chmod 600 /swapfile
     sudo mkswap /swapfile
     sudo swapon /swapfile
+    sudo swapon --show
 
 *To make the change permanent open the /etc/fstab file and append the following line:*
     /swapfile swap swap defaults 0 0
