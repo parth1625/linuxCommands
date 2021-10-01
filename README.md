@@ -122,3 +122,12 @@
     azcopy login  
 
     azcopy copy -r https://<ACCOUNT>.blob.core.windows.net/<CONTAINER>/<DIRECTORY> /local/path   (Copy file from Azure Blog to local)
+
+## Create Swap memory:
+    sudo fallocate -l 1G /swapfile
+    sudo chmod 600 /swapfile
+    sudo mkswap /swapfile
+    sudo swapon /swapfile
+
+*To make the change permanent open the /etc/fstab file and append the following line:*
+    /swapfile swap swap defaults 0 0
