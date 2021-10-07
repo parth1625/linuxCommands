@@ -15,6 +15,14 @@
 ## Count number of files/folders in a directory;
     ls | wc -l
 
+## *cp* commands:
+    cp -r /source/path/* /destination/path           (Copy all files/folders recursively)
+    cp -r /source/path/. /destination/path           (Copy files/folders recursively including hiddens files)
+
+## *rm* commands:
+    rm -rf /destination/path/*                       (Remove files/folders recursively)
+    rm -rf /destination/path/* /destination/path/.*  (Remove files/folders including hidden files)
+
 ## Memory usage per PID:
     sudo pmap <PID>
     sudo pmap <PID> | tail -n 1
