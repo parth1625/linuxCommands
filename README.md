@@ -23,6 +23,11 @@
     rm -rf /destination/path/*                       (Remove files/folders recursively)
     rm -rf /destination/path/* /destination/path/.*  (Remove files/folders including hidden files)
 
+## Adjust brightness:
+    xrandr | grep " connected" | cut -f1 -d " "      (Fetch the name of the attached display)
+    xrandr --output [display-name] --brightness 1
+    xrandr --output [display-name] --brightness 0.5
+
 ## Memory usage per PID:
     sudo pmap <PID>
     sudo pmap <PID> | tail -n 1
