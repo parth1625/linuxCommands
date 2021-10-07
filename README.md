@@ -117,18 +117,6 @@
 
     aws s3 cp -r <DIRECTORY> s3://<BUCKET>/ --exclude ".txt" (Upload direcotry to S3 except ".txt" file)
 
-## Extend a Linux file system after resizing a volume:
-
-After you increase the size of yout volume, you must use file system–specific commands to extend the file system to the larger size.
-
-    df -hT                                             (Verify File System)
-    lsblk                                              (Display info about the block partition)
-    sudo growpart /dev/<BLOCK-NAME> <PARTITION-NUM>    (e.g. sudo growpart /dev/nvme0n1 1)
-    lsblk                                              (Verify the partition reflects)
-
-    sudo xfs_growfs -d /                               (For XFS File System.'/' is the mount point)
-    sudo resize2fs /dev/<PARTITION-NAME>               (For Ext4 File System)
-
 ## Azure Commands:
     az login                               
     azcopy login  
@@ -144,3 +132,15 @@ After you increase the size of yout volume, you must use file system–specific 
 
 *To make the change permanent open the /etc/fstab file and append the following line:*
     /swapfile swap swap defaults 0 0
+
+## Extend a Linux file system after resizing a volume:
+
+After you increase the size of yout volume, you must use file system–specific commands to extend the file system to the larger size.
+
+    df -hT                                             (Verify File System)
+    lsblk                                              (Display info about the block partition)
+    sudo growpart /dev/<BLOCK-NAME> <PARTITION-NUM>    (e.g. sudo growpart /dev/nvme0n1 1)
+    lsblk                                              (Verify the partition reflects)
+
+    sudo xfs_growfs -d /                               (For XFS File System.'/' is the mount point)
+    sudo resize2fs /dev/<PARTITION-NAME>               (For Ext4 File System)
