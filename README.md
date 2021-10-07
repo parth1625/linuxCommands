@@ -140,7 +140,5 @@ After you increase the size of yout volume, you must use file system–specific 
     df -hT                                             (Verify File System)
     lsblk                                              (Display info about the block partition)
     sudo growpart /dev/<BLOCK-NAME> <PARTITION-NUM>    (e.g. sudo growpart /dev/nvme0n1 1)
-    lsblk                                              (Verify the partition reflects)
-
     sudo xfs_growfs -d /                               (For XFS File System.'/' is the mount point)
     sudo resize2fs /dev/<PARTITION-NAME>               (For Ext4 File System)
