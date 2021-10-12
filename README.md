@@ -78,6 +78,10 @@
     sudo nmap -V google.com                  (Detailed info about remote machine)
     sudo nmap 192.168.1.*                    (Scan whole subnet)
 
+## *fing* command:
+    sudo fing -n 192.168.1.0/24
+    sudo fing -n 192.168.1.0/24 -o table,csv,network.txt,10
+
 ## Dispaly wireless interfaces:
     iwconfig
 
