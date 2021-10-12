@@ -82,6 +82,9 @@
     sudo fing -n 192.168.1.0/24
     sudo fing -n 192.168.1.0/24 -o table,csv,network.txt,10
 
+## *arp-scan* command:
+    sudo arp-scan -l --interface=wlp2s0
+
 ## Dispaly wireless interfaces:
     iwconfig
 
