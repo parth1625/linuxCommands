@@ -112,6 +112,10 @@
 ## Find installed packages:
     sudo apt list --installed
 
+## Clean Journal Logs
+    journalctl --disk-usage                  (Check log size) 
+    sudo journalctl --vacuum-time=2d         (Delete log older than 2 days) 
+
 ## Google Cloud Commands:
     gsutil ls                                                 (List all buckets)
     gsutil ls -L -b gs://<BUCKET>
