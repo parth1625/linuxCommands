@@ -128,6 +128,7 @@
 
     gsutil mv gs://<BUCKET>/* </local/path>               (Move all objects from a bucket to local directory)
     gsutil mv <DIRECTORY> gs://<BUCKET>                   (Move all objects from a local directory to bucket)
+    gsutil cp -r gs://<BUCKET-1>/  gs://<BUCKET_2>/       (Copy files between buckets)
 
 ## AWS Commands:
     aws s3 ls                                                 (List all buckets)
