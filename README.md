@@ -114,10 +114,24 @@
 
 ## Clean Journal Logs
     journalctl --disk-usage                  (Check log size) 
-    sudo journalctl --vacuum-time=2d         (Delete log older than 2 days) 
+    sudo journalctl --vacuum-time=2d         (Delete log older than 2 days)
 
 ## Google Cloud Commands:
-    gsutil ls                                                 (List all buckets)
+    https://cloud.google.com/storage/docs/gsutil_install  (Install gsutil)
+
+    gcloud init                                           (Authorise to Google Cloud SDK)
+    gcloud init --console-only                            (Authorise to Google Cloud SDK on console only)
+
+    gcloud auth login                                     (To authorize access without performing other setup steps)
+    gclou auth login --no-launch-browser                  (To authorize access without performing other setup steps on console only)  
+
+    gcloud auth list
+    gcloud config set account <ACCOUNT>                   (Set the active account)
+    gcloud auth revoke <ACCOUNT>                          (Revoke a account)
+
+    gcloud info                                           (Find credentials file)
+
+    gsutil ls                                             (List all buckets)
     gsutil ls -L -b gs://<BUCKET>
     gsutil ls gs://<BUCKET>                               (List all objects in bucket)
 
@@ -131,6 +145,10 @@
     gsutil cp -r gs://<BUCKET-1>/  gs://<BUCKET_2>/       (Copy files between buckets)
 
 ## AWS Commands:
+    aws configure
+    aws configure set aws_access_key_id <AWS_ACCESS_KEY_ID>
+    aws configure set aws_secret_access_key <AWS_SECRET_ACCESS_KEY>
+
     aws s3 ls                                                 (List all buckets)
 
     aws s3 cp s3://<BUCKET>/<FILENAME> s3://<BUCKET>/        (Copy file from S3 to S3)
