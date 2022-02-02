@@ -144,6 +144,9 @@
     gsutil mv <DIRECTORY> gs://<BUCKET>                   (Move all objects from a local directory to bucket)
     gsutil cp -r gs://<BUCKET-1>/  gs://<BUCKET_2>/       (Copy files between buckets)
 
+    gcloud compute instances list                         (List instances)
+    gcloud compute instances describe <INSTANCE_NAME>
+
 ## AWS Commands:
     aws configure
     aws configure set aws_access_key_id <AWS_ACCESS_KEY_ID>
@@ -165,6 +168,9 @@
     azcopy login  
 
     azcopy copy -r https://<ACCOUNT>.blob.core.windows.net/<CONTAINER>/<DIRECTORY> /local/path   (Copy file from Azure Blog to local)
+
+    az aks install-cli
+    az aks get-credentials --resource-group <RESOURCE_GROUP_NAME> --name <AKS_CLUSTER_NAME>    (Connect to the AKS cluster)
 
 ## Create Swap memory:
     sudo fallocate -l 1G /swapfile
