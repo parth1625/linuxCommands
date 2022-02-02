@@ -172,6 +172,14 @@
     az aks install-cli
     az aks get-credentials --resource-group <RESOURCE_GROUP_NAME> --name <AKS_CLUSTER_NAME>    (Connect to the AKS cluster)
 
+## Azure Container Registry:
+    
+Enable the Admin user in Access keys page of Azure Container Registry.
+
+    docker login <AZURE_LOGIN_SERVER>
+    docker tag <APP_NAME> <REGISTRY_NAME>/<APP_NAME>
+    docker push <REGISTRY_NAME>/<APP_NAME>
+
 ## Create Swap memory:
     sudo fallocate -l 1G /swapfile
     sudo chmod 600 /swapfile
