@@ -166,6 +166,9 @@
 
     aws s3 cp -r <DIRECTORY> s3://<BUCKET>/ --exclude ".txt" (Upload direcotry to S3 except ".txt" file)
 
+    aws cloudformation create-stack --stack-name ec2-example --template-body file://01_ec2.yaml      (Create CloudFormation stack)
+    aws cloudformation delete-stack --stack-name ec2-example                                         (Delete CloudFormation stack)
+
 ## Azure Commands:
     az login                               
     azcopy login  
