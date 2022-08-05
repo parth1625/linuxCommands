@@ -119,6 +119,16 @@
     journalctl --disk-usage                  (Check log size) 
     sudo journalctl --vacuum-time=2d         (Delete log older than 2 days)
 
+## Tuned commands:
+    sudo apt install tuned
+    sudo systemctl start tuned
+    sudo systemctl enable tuned
+    tuned-adm active                         (Check the active porfile)
+    tuned-adm recommend                      (Get recommended profile for your OS)
+    tuned-adm list                           (List lists of profile)
+    tuned-adm profile <profile_name>         (Set specific profile for your OS)
+    tuned-adm off                            (Turned off the tuned service)
+
 ## Google Cloud Commands:
     https://cloud.google.com/storage/docs/gsutil_install  (Install gsutil)
 
