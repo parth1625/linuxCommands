@@ -3,6 +3,14 @@
 ## List all ubuntu services:
     service --status-all
 
+## Update Ubuntu to latest release:
+    sudo apt update 
+    sudo apt upgrade
+    sudo apt dist-upgrade
+    sudo apt autoremove
+    sudo apt install update-manager-core
+    sudo do-release-upgrade
+
 ## *systemctl* commands:
     sudo systemctl list-units
     sudo systemctl start <service-name>
